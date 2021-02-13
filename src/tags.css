@@ -1,0 +1,19 @@
+.tags {
+  margin-top: 4rem;
+  width: 400px;
+  height: fit-content;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(218, 214, 214);
+}
+
+.tags button {
+  border-radius: 0.4rem;
+  background-color: lightgray;
+  margin: 0.2rem;
+  padding: 0.4rem 0.6rem;
+}
+.tags button:hover {
+  background-color: darkgray;
+}
