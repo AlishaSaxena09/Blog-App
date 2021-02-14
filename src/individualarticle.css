@@ -1,0 +1,111 @@
+.about-article {
+  padding: 2rem;
+  margin: 2rem auto;
+  background-color: black;
+  color: white;
+}
+.about-article h1 {
+  color: white;
+  font-size: 2rem;
+}
+.profile-div {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.profile-div h3 {
+  margin: 0;
+}
+.profile-div div {
+  margin-right: 0.8rem;
+}
+.profile-div a {
+  color: white;
+}
+.button1 {
+  background-color: transparent;
+  padding: 0.3rem 0.5rem;
+  border: white 2px solid;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1rem;
+  margin: 0 0.8rem;
+}
+.button1:hover {
+  background-color: rgb(218, 209, 209);
+}
+.button2 {
+  background-color: transparent;
+  padding: 0.3rem 0.5rem;
+  border: green 2px solid;
+  border-radius: 0.4rem;
+  color: green;
+  font-size: 1rem;
+}
+.button2:hover {
+  background-color: lightgreen;
+}
+.button3 {
+  background-color: transparent;
+  padding: 0.3rem 0.5rem;
+  border: black 2px solid;
+  border-radius: 0.4rem;
+  color: black;
+  font-size: 1rem;
+  margin: 0 0.7rem;
+}
+.button3:hover {
+  background-color: grey;
+}
+
+/*  */
+
+.article-introduction {
+  padding: 2rem;
+  margin: 2rem 4rem;
+  border: 2px solid green;
+}
+.article-introduction h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom: 2px solid green;
+  padding: 0.4rem;
+}
+.article-introduction p {
+  font-size: 1rem;
+  line-height: 2;
+}
+.profile-about .profile-div {
+  justify-content: center;
+}
+.profile-about a {
+  color: black;
+}
+/*  */
+.comment-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+.comment-section textarea {
+  padding: 2rem 8.2rem;
+  margin: 0;
+}
+.textarea-button {
+  margin: 0 auto;
+  width: 28%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: lightgray;
+}
+.textarea-button img {
+  width: 4rem;
+  vertical-align: middle;
+}
+.textarea-button button {
+  padding: 0 2rem;
+  background-color: green;
+  color: white;
+}

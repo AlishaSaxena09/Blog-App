@@ -6,7 +6,7 @@
   color: green;
   font-size: 2rem;
 }
-h4 {
+.articles h4 {
   border-bottom: green 2px solid;
 }
 .global-feed {

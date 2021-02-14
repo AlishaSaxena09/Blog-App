@@ -39,9 +39,13 @@ class Articles extends React.Component {
                     </div>
                   </div>
                   <div className="article-more">
-                    <h3>{article.title}</h3>
+                    <h3>
+                      <Link to={`/articles/${article.slug}`}>
+                        {article.title}
+                      </Link>
+                    </h3>
                     <p>{article.description}</p>
-                    <Link>Read more ... </Link>
+                    <Link to={`/articles/${article.slug}`}>Read more ... </Link>
                   </div>
                 </div>
               );
