@@ -1,0 +1,14 @@
+#footer {
+  display: flex;
+  flex-wrap: wrap;
+  height: 3.5rem;
+  align-items: center;
+  border-top: 2px solid grey;
+
+  /* justify-content: ; */
+}
+#footer span {
+  color: green;
+  font-weight: 700;
+  margin-right: 2rem;
+}

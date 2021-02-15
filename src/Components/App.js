@@ -8,6 +8,8 @@ import Article from "./Articles";
 import Home from "./Home";
 import IndividualArticle from "./IndividualArticle";
 import Footer from "./Footer";
+import UserPage from "./UserPage";
+import Editor from "./Editor";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/signin" component={SignIn} />
       <Route path="/signup" component={SignUp} />
       <Route path="/articles/:slug" component={IndividualArticle} />
+      <Route path="/profiles/:username" component={UserPage} />
+      <Route path="/editor" component={Editor} />
       <Footer />
     </div>
   );

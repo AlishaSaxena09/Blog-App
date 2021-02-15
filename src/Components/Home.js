@@ -4,6 +4,7 @@ import Main from "./Main";
 import Tags from "./Tags";
 import "../home.css";
 import IndividualArticle from "./IndividualArticle";
+import UserPage from "./UserPage";
 function Home() {
   return (
     <div>

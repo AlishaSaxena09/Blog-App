@@ -22,7 +22,7 @@ class IndividualArticle extends React.Component {
     return (
       <div>
         {article ? (
-          <div>
+          <div className="individual">
             <div className="about-article">
               <h1>{article.title}</h1>
               <div className="profile-div">

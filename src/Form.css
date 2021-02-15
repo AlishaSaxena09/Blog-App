@@ -1,5 +1,6 @@
 .form {
   text-align: center;
+  height: 600px;
 }
 .form input {
   display: block;

@@ -29,7 +29,9 @@ class Articles extends React.Component {
                 <div className="global-feed">
                   <div className="article-desc">
                     <div className="img">
-                      <img alt="user image" src={article.author.image} />
+                      <Link to={`/profiles/${article.author.username}`}>
+                        <img alt="user image" src={article.author.image} />
+                      </Link>
                     </div>
                     <div>
                       <h3>

@@ -1,0 +1,32 @@
+.profiles {
+  height: 900px;
+}
+.about-div {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgb(231, 221, 221);
+}
+.about-div img {
+  border-radius: 50%;
+  width: 10rem;
+}
+.follow {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.4rem;
+  border: 2px solid grey;
+  font-size: 1rem;
+  color: grey;
+}
+.user-article h2 {
+  color: green;
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+.user-article {
+  padding: 2rem;
+}
+.user-article .article-more {
+  border: 2px solid green;
+  padding: 2rem;
+  margin: 2rem 0;
+}
