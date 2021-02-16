@@ -10,6 +10,7 @@ import IndividualArticle from "./IndividualArticle";
 import Footer from "./Footer";
 import UserPage from "./UserPage";
 import Editor from "./Editor";
+import PrivateNavigation from "./PrivateNavigation";
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -45,6 +46,7 @@ class App extends React.Component {
         <Route path="/articles/:slug" component={IndividualArticle} />
         <Route path="/profiles/:username" component={UserPage} />
         <Route path="/editor" component={Editor} />
+        {/* <Route path="/private" component={PrivateNavigation} /> */}
         <Footer />
       </div>
     );
