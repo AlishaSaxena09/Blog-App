@@ -10,20 +10,45 @@ import IndividualArticle from "./IndividualArticle";
 import Footer from "./Footer";
 import UserPage from "./UserPage";
 import Editor from "./Editor";
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null,
+    };
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Route path="/" exact component={Home} />
-      <Route path="/signin" component={SignIn} />
-      <Route path="/signup" component={SignUp} />
-      <Route path="/articles/:slug" component={IndividualArticle} />
-      <Route path="/profiles/:username" component={UserPage} />
-      <Route path="/editor" component={Editor} />
-      <Footer />
-    </div>
-  );
+  componentDidMount() {
+    if (localStorage.getItem("token")) {
+      fetch("https://mighty-oasis-08080.herokuapp.com/api/user", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+
+      console.log("token exists");
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Route path="/" exact component={Home} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/articles/:slug" component={IndividualArticle} />
+        <Route path="/profiles/:username" component={UserPage} />
+        <Route path="/editor" component={Editor} />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
