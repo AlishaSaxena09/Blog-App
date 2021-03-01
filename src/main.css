@@ -1,7 +1,14 @@
-.main {
+/* .main {
   text-align: center;
   padding: 5rem;
-  background-color: #5cb85c;
+  background-image: linear-gradient(
+    to bottom,
+    #f10e0e,
+    #e0001f,
+    #ce0028,
+    #ba002e,
+    #a60332
+  );
 }
 h2 {
   font-size: 3rem;
@@ -14,4 +21,35 @@ h2 {
   font-size: 1.2rem;
   color: white;
   margin: 0 auto;
+} */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.main-text {
+  width: 50%;
+}
+.main-text h2 {
+  margin: 0 auto 2rem auto;
+  padding: 0;
+  font-size: 7rem;
+  text-align: left;
+  font-family: "Lobster Two", cursive;
+  text-shadow: 3px 3px lightslategray;
+}
+.main-text p {
+  font-family: "Lobster Two", cursive;
+  text-align: left;
+  margin: 0 auto 2rem auto;
+  font-size: 2.5rem;
+  text-shadow: 0 0 3px rgb(82, 81, 81);
+}
+.main-img {
+  width: 50%;
+}
+.main-img img {
+  width: 80%;
 }

@@ -1,20 +1,25 @@
 import React from "react";
-import Articles from "./Articles";
 import Main from "./Main";
 import Tags from "./Tags";
 import "../home.css";
 import IndividualArticle from "./IndividualArticle";
 import UserPage from "./UserPage";
-function Home() {
-  return (
-    <div>
-      <Main />
-      <div className="global">
-        <Articles />
-        <Tags />
+import GlobalFeed from "./GlobalFeed";
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        {this.props.user ? null : <Main />}
+        <div className="global">
+          <GlobalFeed />
+          <Tags />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Home;

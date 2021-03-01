@@ -1,14 +1,17 @@
 #footer {
+  margin-top: 2rem;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: 3.5rem;
+  padding: 0 3rem;
   align-items: center;
   border-top: 2px solid grey;
 
   /* justify-content: ; */
 }
 #footer span {
-  color: green;
+  color: darkred;
   font-weight: 700;
   margin-right: 2rem;
 }

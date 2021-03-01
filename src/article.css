@@ -1,18 +1,44 @@
-.articles {
+/* .articles {
   margin: 1rem 3rem;
   width: 60%;
 }
-.articles h4 a {
-  color: green;
+.feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articles a + a {
+  margin-left: 2rem;
+}
+.articles a h4 {
+  color: #b30130;
   font-size: 2rem;
+  padding: 0;
+}
+.articles a.active h4 {
+  border-bottom: #b30130 3px solid;
 }
 .articles h4 {
-  border-bottom: green 2px solid;
-}
-.global-feed {
+  /* text-align: center; */
+/* padding-bottom: 1rem; */
+/* border-bottom: #b30130 3px solid; */
+/* } */
+/* .global-feed {
   margin-top: 2rem;
-  border-bottom: green 2px solid;
-  padding: 2rem 0;
+  margin-right: 2rem;
+  border: #b30130 3px solid;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 33%;
+}
+.global-feed:hover {
+  background-color: rgb(202, 158, 158);
 }
 a {
   text-decoration: none;
@@ -24,16 +50,17 @@ a {
   align-items: center;
 }
 .article-desc a {
-  color: green;
+  color: #b30130;
   font-size: 1rem;
   margin-bottom: 0;
+  text-transform: capitalize;
 }
 .article-desc h3 {
   margin: 0;
   line-height: 1.1;
 }
 .article-desc date {
-  color: grey;
+  color: black;
   font-size: 0.6rem;
   margin: 0;
 }
@@ -50,13 +77,17 @@ a {
   word-break: break-all;
   margin: 0;
   margin-top: 1rem;
+  text-transform: capitalize;
+}
+.article-more h3 a:hover {
+  color: #b30130;
 }
 .article-more p {
-  color: darkgray;
+  color: black;
   font-size: 0.8rem;
-  margin: 0.1rem 0 1rem;
+  margin: 0.5rem 0 1rem;
   word-break: break-all;
 }
 .article-more a {
-  color: gray;
-}
+  color: black;
+} */

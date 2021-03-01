@@ -1,4 +1,4 @@
-.header {
+/* .header {
   margin: 0 auto;
   padding: 0.3rem 4rem;
   display: flex;
@@ -7,23 +7,109 @@
   align-items: center;
 }
 h1 {
-  font-size: 1.3rem;
-  color: #5cb85c;
+  font-size: 1.5rem;
+  color: #70000f;
   font-weight: bold;
 }
 .ul {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .ul li {
   margin: 0 0.7rem;
   list-style: none;
 }
 .ul li a {
-  color: darkgray;
-  font-size: 1rem;
+  color: rgb(153, 153, 153);
+  font-size: 1.2rem;
   text-decoration: none;
 }
 .ul li a:hover {
+  color: #70000f;
+} */
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.headers {
+  box-shadow: 0 6px 31px -2px rgb(0 0 0 / 10%);
+}
+.header {
+  /* padding: 2rem; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav {
+  margin: 0 2rem;
+}
+.right {
+  margin: 0 2rem;
+}
+.nav a {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1rem;
+  color: rgb(110, 109, 122);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.nav a i {
+  margin-left: 0.7rem;
+}
+.nav a:hover {
+  color: rgb(234, 76, 137);
+}
+.right a {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 1rem;
+  color: rgb(110, 109, 122);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.7rem 0.9rem;
+}
+.sign-btn:hover {
+  background-color: #3fa7d6;
+  border-radius: 0.4rem;
+  color: white;
+}
+.signup-btn:hover {
+  background-color: #eb4646;
+  border-radius: 0.4rem;
+  color: white;
+}
+
+/* logo */
+
+.logo {
+  font-family: "Lobster Two", cursive;
   color: black;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  margin-right: 1rem;
+}
+
+/* Navigation-Links */
+
+.logout {
+  color: darkgray;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+}
+.logout:hover {
+  background-color: #bc002d;
+  border-radius: 0.3rem;
+  color: white;
 }

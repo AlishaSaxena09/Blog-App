@@ -25,8 +25,10 @@ class UserPage extends React.Component {
         this.setState({ articlesByUser: data.articles });
       });
   }
+
   render() {
     const profile = this.state.profile;
+    const currentUser = this.props.user;
     const articlesByUser = this.state.articlesByUser;
     console.log(this.state);
     return (
@@ -34,24 +36,62 @@ class UserPage extends React.Component {
         {profile ? (
           <div className="profiles">
             <div className="about-div">
-              <img src={profile.image} />
-              <h3>{profile.username}</h3>
-              <p>{profile.bio}</p>
-              <button className="follow">Follow {profile.username}</button>
+              <div className="about-profile container">
+                <div className="profile-image">
+                  <img src={profile.image} />
+                </div>
+                <div className="profile-description">
+                  <h3>{profile.username}</h3>
+                  <p>{profile.bio}</p>
+                  {currentUser && currentUser.username === profile.username ? (
+                    <button className="follow">Edit profile Settings</button>
+                  ) : (
+                    <button className="follow">
+                      <i class="fas fa-plus"></i>
+                      Follow {profile.username}
+                    </button>
+                  )}
+                </div>
+              </div>
             </div>
             <div className="user-article">
-              <h2>My articles</h2>
-              {articlesByUser
-                ? articlesByUser.map((article) => {
-                    return (
-                      <div className="article-more ">
-                        <h3>{article.title}</h3>
-                        <p>{article.description}</p>
-                        <Link>Read more ...</Link>
-                      </div>
-                    );
-                  })
-                : null}
+              <div className="frosted-effect">
+                <div className="container">
+                  <h2>
+                    My articles <i class="fas fa-feather-alt"></i>
+                  </h2>
+                  <div className="articleByUser">
+                    {articlesByUser
+                      ? articlesByUser.map((article) => {
+                          return (
+                            <div className="article-more ">
+                              <header>
+                                <h3>{article.title}</h3>
+                                <p>
+                                  {article.description.length > 120
+                                    ? article.description.slice(0, 120) + "..."
+                                    : article.description}
+                                </p>
+                              </header>
+                              <footer className="read-more-container">
+                                <button className="like-button">
+                                  <i className="fas fa-heart"></i>{" "}
+                                  <span>{article.favoritesCount}</span>
+                                </button>
+                                <Link
+                                  className="read-more"
+                                  to={`/articles/${article.slug}`}
+                                >
+                                  Read more ...
+                                </Link>
+                              </footer>
+                            </div>
+                          );
+                        })
+                      : null}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ) : null}

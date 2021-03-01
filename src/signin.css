@@ -1,0 +1,91 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-image {
+  width: 50%;
+
+  text-align: left;
+}
+.form-image img {
+  width: 100%;
+}
+.form-section {
+  margin: 0 auto;
+  background-color: #007dfe;
+  width: 50%;
+}
+.form-section form {
+  margin-top: 5rem;
+  text-align: center;
+}
+.form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-section form h3 {
+  font-size: 3rem;
+  color: white;
+  margin: 2rem auto;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+.form-section form a {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.form-inputs {
+  margin-top: 4rem;
+}
+.form-inputs input {
+  outline: none;
+
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 1.8rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  width: 60%;
+  padding: 1rem;
+}
+.signinbtn {
+  margin-top: 1.5rem;
+  border-radius: 1.8rem;
+  font-size: 1.2rem;
+  padding: 0.8em 3rem;
+  border: 3px solid white;
+  font-weight: 500;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+.signinbtn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #fe9900,
+    #f9a900,
+    #f2b800,
+    #eac700,
+    #e1d613
+  );
+}
+
+/*  */
+.form-error {
+  text-align: center;
+  list-style: none;
+  color: rgb(180, 22, 22);
+  padding: 0;
+  font-weight: 600;
+}
+.svg {
+  text-align: right;
+}
+.svg img {
+  width: 50%;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Form.css";
+import "../signin.css";
 import { Link } from "react-router-dom";
 
 function validateEmail(email) {
@@ -17,6 +17,16 @@ class SignIn extends React.Component {
     super(props);
     this.state = { email: "", password: "", errors: [] };
   }
+  handleEmail = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  };
+  handlePassword = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
   validateForm = () => {
     const errors = [];
 
@@ -34,29 +44,82 @@ class SignIn extends React.Component {
     }
 
     this.setState({ errors });
+    return !errors.length;
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    this.validateForm();
+    if (this.validateForm()) {
+      console.log("validform");
+      fetch("https://mighty-oasis-08080.herokuapp.com/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user: {
+            email: this.state.email,
+            password: this.state.password,
+          },
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.errors) {
+            this.setState({
+              errors: Object.keys(data.errors).map((field) => {
+                return field + " " + data.errors[field];
+              }),
+            });
+            return;
+          }
+          localStorage.setItem("token", data.user.token);
+          this.props.setUser(data.user);
+        });
+    }
     console.log("form submitted");
   };
   render() {
     return (
       <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <h3>SIGN IN</h3>
-          <ul className="form-error">
-            {this.state.errors.map((error) => (
-              <li>{error}</li>
-            ))}
-          </ul>
-          <p>
-            <Link to="/signup">Need an acount ?</Link>
-          </p>
-          <input placeholder="Email" type="email" name="email" />
-          <input placeholder="Password" type="password" name="password" />
-          <button type="Submit">Sign In</button>
-        </form>
+        <div className="form-image">
+          <img src="./login.jpg" />
+        </div>
+        <div className="form-section">
+          <form onSubmit={this.handleSubmit}>
+            <h3>Already a User ?</h3>
+            <p>
+              <Link to="/signup">Need an account ?</Link>
+            </p>
+            <ul className="form-error">
+              {this.state.errors.map((error) => (
+                <li>{error}</li>
+              ))}
+            </ul>
+            <div className="form-inputs">
+              <input
+                placeholder="Your e-mail"
+                type="email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleEmail}
+              />
+              <input
+                placeholder="Your Password"
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handlePassword}
+              />
+              <button className="signinbtn" type="Submit">
+                Sign In
+              </button>
+            </div>
+            <div className="svg">
+              <img src="./light-signup.svg" />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

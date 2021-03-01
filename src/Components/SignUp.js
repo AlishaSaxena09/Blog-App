@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Form.css";
+import "../signup.css";
 function validateEmail(email) {
   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
@@ -82,6 +82,7 @@ class SignUp extends React.Component {
             return;
           }
           localStorage.setItem("token", data.user.token);
+          this.props.setUser(data.user);
         });
     }
     console.log("form submitted");
@@ -89,42 +90,54 @@ class SignUp extends React.Component {
   render() {
     return (
       <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <h3>SIGN UP</h3>
-          <p>
-            <Link to="/signin">Have an acount ?</Link>
-          </p>
+        <div className="form-image">
+          <img src="./signup.jpg" />
+        </div>
+        <div className="signup-section">
+          <form onSubmit={this.handleSubmit}>
+            <h3>SIGN UP</h3>
+            <p>
+              <Link to="/signin">Have an account ?</Link>
+            </p>
 
-          <div>
-            <ul className="form-error">
-              {this.state.errors.map((error) => (
-                <li>{error}</li>
-              ))}
-            </ul>
+            <div>
+              <ul className="form-error">
+                {this.state.errors.map((error) => (
+                  <li>{error}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="signup-inputs">
+              <input
+                onChange={this.handleName}
+                value={this.state.name}
+                placeholder="Your Name"
+                type="text"
+                name="text"
+              />
+              <input
+                onChange={this.handleEmail}
+                value={this.state.email}
+                placeholder="Email"
+                type="email"
+                name="email"
+              />
+              <input
+                onChange={this.handlePassword}
+                value={this.state.password}
+                placeholder="Password"
+                type="password"
+                name="password"
+              />
+              <button className="signupbtn" type="Submit">
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <div className="svg-img">
+            <img src="./signup-01.svg" />
           </div>
-          <input
-            onChange={this.handleName}
-            value={this.state.name}
-            placeholder="Your Name"
-            type="text"
-            name="text"
-          />
-          <input
-            onChange={this.handleEmail}
-            value={this.state.email}
-            placeholder="Email"
-            type="email"
-            name="email"
-          />
-          <input
-            onChange={this.handlePassword}
-            value={this.state.password}
-            placeholder="Password"
-            type="password"
-            name="password"
-          />
-          <button type="Submit">Sign Up</button>
-        </form>
+        </div>
       </div>
     );
   }

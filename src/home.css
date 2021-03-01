@@ -1,5 +1,39 @@
 .global {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
+}
+.article-more {
+  margin: 0 auto;
+}
+.article-more.full-width {
+  width: 50%;
+  margin: 2rem auto;
+}
+.article-author-details {
+  display: flex;
+  align-items: center;
+}
+.feed-button {
+  color: white;
+  font-size: 2rem;
+  width: max-content;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.3rem;
+  background-color: #3fa7d6;
+}
+
+.article-author-details img {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.article-author-details h3.name {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.article-author-details date {
+  font-size: 0.8rem;
 }

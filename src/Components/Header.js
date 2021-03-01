@@ -8,21 +8,32 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="header">
-        <h1>conduit</h1>
-        <nav className="nav">
-          <ul className="ul">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/signin">Sign In</Link>
-            </li>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
-          </ul>
-        </nav>
+      <div className="headers">
+        <div className="header container">
+          <nav className="navigation">
+            <Link to="/">
+              <h1 className="logo">Conduit</h1>
+            </Link>
+            <div className="nav">
+              <Link to="/">
+                Home
+                <i class="fas fa-home"></i>
+              </Link>
+              <Link to="/tags">
+                Tags
+                <i class="fas fa-tags"></i>
+              </Link>
+            </div>
+          </nav>
+          <div className="right">
+            <Link className="sign-btn" to="/signin">
+              Sign In
+            </Link>
+            <Link className="signup-btn" to="/signup">
+              Sign Up
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

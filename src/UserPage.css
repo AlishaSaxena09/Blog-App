@@ -1,32 +1,206 @@
 .profiles {
-  height: 900px;
+  /* height: 900px; */
 }
-.about-div {
+/* .about-div {
   text-align: center;
   padding: 2rem;
-  background-color: rgb(231, 221, 221);
+  background-color: #c6002b;
 }
 .about-div img {
   border-radius: 50%;
   width: 10rem;
+  border: 4px solid white;
 }
 .follow {
-  padding: 0.2rem 0.5rem;
+  padding: 0.4rem 0.5rem;
   border-radius: 0.4rem;
-  border: 2px solid grey;
-  font-size: 1rem;
-  color: grey;
+  border: 2px solid #610317;
+  font-size: 1.3rem;
+  color: #c6002b;
+  background-color: white;
+}
+.follow:hover {
+  background-color: rgb(211, 99, 116);
 }
 .user-article h2 {
-  color: green;
+  color: #c6002b;
   font-size: 2rem;
   letter-spacing: 0;
+  text-align: center;
 }
 .user-article {
   padding: 2rem;
 }
+.articleByUser {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-div h3 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  /* text-transform: capitalize; */
+/* font-size: 2rem;
+}
 .user-article .article-more {
-  border: 2px solid green;
+  border: 2px solid #c6002b;
+  padding: 4rem 1.7rem;
+  width: 25%;
+  margin: 1rem;
+  border-radius: 1.3rem;
+  text-align: justify;
+  box-shadow: 3px 3px 5px 6px #ccc;
+} */
+/* .user-article .article-more h3 {
+  margin: 1rem 0;
+  color: #c6002b;
+}
+.about-div p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+} */
+/*  */
+i {
+  margin-right: 0.5rem;
+}
+a {
+  text-decoration: none;
+}
+/*  */
+.about-div {
+  background-color: black;
+  padding: 2.5rem;
+}
+.about-profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.profile-image {
+  width: 12rem;
+  padding: 0.5rem;
+  background: linear-gradient(45deg, #cc0000, #0000fd, #d55b6a, yellow);
+  border-radius: 9999px;
+  margin-right: 4rem;
+}
+.profile-image img {
+  width: 100%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.profile-description h3 {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  font-family: "Lobster Two", cursive;
+}
+.profile-description p {
+  font-size: 1.5rem;
+  font-family: "Lobster Two";
+}
+.follow {
+  padding: 1rem 1.8rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border: 3px solid darkgray;
+  border-radius: 0.4rem;
+}
+.follow:hover {
+  color: black;
+  background-color: #d55b6a;
+  border: 3px solid black;
+}
+.user-article {
+  /* margin-top: 2rem; */
+  width: 100%;
+  background: radial-gradient(#cc0000, #0000fd, #cc0000);
+}
+.user-article .frosted-effect {
+  width: 100%;
   padding: 2rem;
-  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+}
+.user-article h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Lobster Two", cursive;
+}
+.articleByUser {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: black; */
+  /* padding: 2.rem; */
+  /* text-align: center; */
+}
+
+.article-more {
+  width: 25%;
+  box-shadow: 0 4px 8px 0 rgba(19, 18, 18, 0.2);
+  transition: 0.3s;
+  /* border: 4px solid #d55b6a; */
+  margin: 1rem;
+  padding: 1rem 2rem 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article-more .article-title {
+  margin: 0.5rem 0;
+}
+.article-more .article-description {
+  margin-top: 0;
+}
+
+.read-more-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.read-more-container .like-button {
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.read-more-container .like-button .fa-heart {
+  color: red;
+  font-size: 1.3rem;
+}
+
+.read-more-container .like-button span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.read-more {
+  background-color: black;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 2px solid black;
+  font-weight: bold;
+}
+.read-more:hover {
+  background-color: white;
+  border-color: black;
+  color: black;
 }
